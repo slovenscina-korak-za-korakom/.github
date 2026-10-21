@@ -6,8 +6,9 @@
 
 <p align="center">
   <a href="https://slovenscinakzk.com"><img src="https://img.shields.io/badge/Platform-Live-brightgreen" alt="Platform Status"></a>
-  <!-- <a href="#"><img src="https://img.shields.io/badge/Students-50%2B-blue" alt="Students"></a> -->
-  <a href="#"><img src="https://img.shields.io/badge/Lessons-3000%2B%20hours-orange" alt="Lessons"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Regular%20Students-150%2B-blue" alt="Regular Students"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Lessons-4500%2B%20hours-orange" alt="Lessons"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Teachers-8-purple" alt="Teachers"></a>
 </p>
 
 ## About Slovenščina Korak za Korakom
