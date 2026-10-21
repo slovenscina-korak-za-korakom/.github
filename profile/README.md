@@ -31,32 +31,24 @@ The platform consists of two main applications built with modern web technologie
 ### Student Application
 The public-facing platform where learners discover, book, and attend Slovenian lessons. Features include user authentication, lesson booking, payment processing, and progress dashboards.
 
-**Repository:** [`slovene-step-by-step`](https://github.com/sebastjanbas/slovene-step-by-step)
+**Repository:** [`student-platform`](https://github.com/slovenscina-korak-za-korakom/student-platform)
 
 ### Admin Application
 The internal management system for tutors and administrators. Manage schedules, create language club events, track payments, coordinate team activities, and monitor platform analytics.
 
-**Repository:** [`slovene-step-by-step-admin`](https://github.com/sebastjanbas/admin-slovene-step-by-step)
+**Repository:** [`admin-platform`](https://github.com/slovenscina-korak-za-korakom/admin-platform)
 
-## Tech Stack
+### Mobile Application
+The on-the-go companion for students, bringing lessons and bookings to their pocket. Features include user authentication, lesson browsing and booking, push notifications for upcoming sessions, and progress tracking on the move.
 
-Both applications are built with:
-
-- **[Next.js 16](https://nextjs.org)** - React framework with App Router
-- **[TypeScript](https://www.typescriptlang.org)** - Type-safe development
-- **[PostgreSQL](https://www.postgresql.org)** - Primary database
-- **[Drizzle ORM](https://orm.drizzle.team)** - Type-safe database queries
-- **[Clerk](https://clerk.com)** - Authentication and user management
-- **[Stripe](https://stripe.com)** - Payment processing
-- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first styling
-- **[Radix UI](https://www.radix-ui.com)** - Accessible component primitives
+**Repository:** [`student-app`](https://github.com/slovenscina-korak-za-korakom/student-app)
 
 
 ## Community & Support
 
 Join our thriving community of Slovenian language learners:
 
-- **[Telegram Community](https://t.me/slovenscina_korak_za_korakom)** - 1 700+ members for practice and support
+- **[Telegram Community](https://t.me/slovenscina_korak_za_korakom)** - 2 100+ members for practice and support
 - **[Instagram](https://www.instagram.com/slovenscina_korakzakorakom/)** - Daily tips and cultural insights
 - **[TikTok](https://www.tiktok.com/@slovenina.korak.z5)** - Quick language lessons and fun content
 - **[Website](https://slovenscinakzk.com)** - Book your free trial lesson
