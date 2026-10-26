@@ -1,66 +1,54 @@
 <p align="center">
   <a href="https://slovenscinakzk.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/Slovenscina-Korak-za-Korakom/.github/main/assets/slo-logo.svg" width="400" alt="Slovenščina Korak za Korakom Logo">
+    <img src="https://raw.githubusercontent.com/Slovenscina-Korak-za-Korakom/.github/main/assets/slo-logo.svg" width="400" alt="Slovenščina Korak za Korakom logo">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://slovenscinakzk.com"><img src="https://img.shields.io/badge/Platform-Live-brightgreen" alt="Platform Status"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Regular%20Students-150%2B-blue" alt="Regular Students"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Lessons-4500%2B%20hours-orange" alt="Lessons"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Teachers-8-purple" alt="Teachers"></a>
+  <a href="https://slovenscinakzk.com"><img src="https://img.shields.io/badge/Platform-Live-brightgreen" alt="Platform status"></a>
+  <img src="https://img.shields.io/badge/Students-350%2B-blue" alt="Students">
+  <img src="https://img.shields.io/badge/Lessons-5%2C000%2B%20hours-orange" alt="Lesson hours">
+  <img src="https://img.shields.io/badge/Staff-10-purple" alt="Staff">
+  <img src="https://img.shields.io/badge/Languages-4-lightgrey" alt="Languages">
 </p>
 
-## About Slovenščina Korak za Korakom
+## About
 
-Slovenščina Korak za Korakom (Slovene Step by Step) is an online language learning platform that connects students with professional tutors for personalized Slovenian lessons. We believe language learning should be engaging, effective, and tailored to your goals. The platform streamlines the entire learning experience, from booking to payment to progress tracking:
+**Slovenščina Korak za Korakom** (Slovene Step by Step) is a Slovenian language school that teaches online and in person. Learners are matched with a tutor after a placement test and take one-on-one, pair, or group lessons, plus language-club events and a self-paced video course.
 
-- **Personalized Learning Paths** - Customized lessons tailored to your goals
-- **Flexible Scheduling** - Platform offers scheduling for individual and group sessions
-- **Progress Tracking** - Comprehensive dashboard with learning analytics
-- **Community Integration** - Join 1,700+ members in our Telegram group and language club events
-- **Multi-language Support** - Available in English, Slovenian, Russian, and Italian
-- **Professional Tutors** - Experienced instructors with proven teaching methods
+Until 2026 the school ran on Excel, Google Calendar, and Telegram. Today it runs on its own platform, which handles booking, scheduling, payments, courses, and staff management in one place, in Slovenian, English, Italian, and Russian.
 
-Slovenščina Korak za Korakom is accessible, effective, and provides everything needed for mastering Slovene.
+## The platform
 
-## Platform Architecture
+| Repository | What it is |
+|---|---|
+| [`student-platform`](https://github.com/slovenscina-korak-za-korakom/student-platform) | The learner-facing web app: booking, payments, progress tracking, and encrypted course streaming |
+| [`admin-platform`](https://github.com/slovenscina-korak-za-korakom/admin-platform) | The staff tool: scheduling, team hours and budgets, language-club events, and course management |
+| [`student-app`](https://github.com/slovenscina-korak-za-korakom/student-app) | Mobile companion app for learners: booking, session reminders, and progress *(in development)* |
 
-The platform consists of two main applications built with modern web technologies:
+### Engineering at a glance
 
-### Student Application
-The public-facing platform where learners discover, book, and attend Slovenian lessons. Features include user authentication, lesson booking, payment processing, and progress dashboards.
+- **350+ registered learners and 10 staff** on the platform, with **80–100 lesson-hours scheduled every week**
+- **Time-zone-aware scheduling** for learners and tutors in different countries, built around IANA time zones after a real production bug ([the story](https://github.com/slovenscina-korak-za-korakom/admin-platform))
+- **Encrypted course streaming:** AES-128 HLS, enrollment-gated keys, and short-lived presigned S3 URLs, so paid video never exposes a source URL ([details](https://github.com/slovenscina-korak-za-korakom/student-platform))
+- **Automated video pipeline:** uploads from the admin panel are packaged into encrypted HLS by an S3-triggered AWS Lambda running ffmpeg
+- **Near-zero hosting cost** on Vercel and pay-per-use AWS
 
-**Repository:** [`student-platform`](https://github.com/slovenscina-korak-za-korakom/student-platform)
+Designed, built, and operated by a single engineer, [Sebastjan Bas](https://github.com/sebastjanbas).
 
-### Admin Application
-The internal management system for tutors and administrators. Manage schedules, create language club events, track payments, coordinate team activities, and monitor platform analytics.
+**Stack:** Next.js · TypeScript · PostgreSQL (Drizzle ORM) · Clerk · Stripe · AWS S3 and Lambda · Vercel
 
-**Repository:** [`admin-platform`](https://github.com/slovenscina-korak-za-korakom/admin-platform)
+## Community
 
-### Mobile Application
-The on-the-go companion for students, bringing lessons and bookings to their pocket. Features include user authentication, lesson browsing and booking, push notifications for upcoming sessions, and progress tracking on the move.
-
-**Repository:** [`student-app`](https://github.com/slovenscina-korak-za-korakom/student-app)
-
-
-## Community & Support
-
-Join our thriving community of Slovenian language learners:
-
-- **[Telegram Community](https://t.me/slovenscina_korak_za_korakom)** - 2 100+ members for practice and support
-- **[Instagram](https://www.instagram.com/slovenscina_korakzakorakom/)** - Daily tips and cultural insights
-- **[TikTok](https://www.tiktok.com/@slovenina.korak.z5)** - Quick language lessons and fun content
-- **[Website](https://slovenscinakzk.com)** - Book your free trial lesson
+- **[Telegram](https://t.me/slovenscina_korak_za_korakom)**: 2,100+ members practising Slovenian together
+- **[Instagram](https://www.instagram.com/slovenscina_korakzakorakom/)**: daily tips and cultural insights
+- **[TikTok](https://www.tiktok.com/@slovenina.korak.z5)**: short language lessons
+- **[Website](https://slovenscinakzk.com)**: book a free trial lesson
 
 ## Security
 
-If you discover a security vulnerability, please email [sebastjan.bas1@gmail.com](mailto:sebastjan.bas1@gmail.com). All security vulnerabilities will be promptly addressed.
+Found a vulnerability? Email [sebastjan.bas1@gmail.com](mailto:sebastjan.bas1@gmail.com). Reports are handled promptly.
 
 ## License
 
-This project is proprietary and private. All rights reserved.
-
----
-
-<p align="center">Built with ❤️ for Slovene language learners worldwide</p>
+Proprietary. All rights reserved.
